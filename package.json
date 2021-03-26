@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-ja-no-orthographic-variants",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "表記ゆれをチェックするtextlintルール",
   "keywords": [
     "textlintrule"
@@ -12,6 +12,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hata6502/textlint-rule-ja-no-orthographic-variants.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/hata6502"
   },
   "license": "MIT",
   "author": "Tomoyuki Hata <hato6502@gmail.com>",
