@@ -19,7 +19,8 @@ const module: TextlintRuleModule = (context) => {
       const surfaceForms = tokens.map(({ surface_form }) => surface_form);
 
       tokens.forEach(({ surface_form, word_position }) => {
-        const word = htdic[surface_form];
+        // Ignore keys from Object.prototype such as "constructor" and "toString"
+        const word = Object.prototype.hasOwnProperty.call(htdic, surface_form) ? htdic[surface_form] : undefined;
 
         if (!word) {
           return;

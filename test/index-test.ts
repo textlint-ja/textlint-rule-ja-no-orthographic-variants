@@ -4,7 +4,11 @@ import rule from '../src/index';
 const tester = new TextLintTester();
 
 tester.run('ja-no-orthographic-variants', rule, {
-  valid: ['部品を組み立てて、他の組み立て作業もした。'],
+  valid: [
+    '部品を組み立てて、他の組み立て作業もした。',
+    // Words that are keys of Object.prototype
+    'constructor と toString と hasOwnProperty を使う。',
+  ],
   invalid: [
     {
       text: '部品を組み立てて、他の組立作業もした。',
